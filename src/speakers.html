@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Estevez">
+    <meta name="description" content="Entrega P2 de la asignatura HTML y CSS2 del Master Universitario en Desarrollo de sitios y aplicaciones web de la UOC">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Digital | Speakers</title>
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <main class="main">
+      <article class="main__article">
+        <h2 class="article__title">Speakers</h2>
+
+        <!--Bootstrap Component - Breadcrumb-->
+        <div class="container my-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb fs-5">
+              <li class="breadcrumb-item"><a class="text-white text-underline" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+              <li class="breadcrumb-item active text-white" aria-current="page">Speakers</li>
+            </ol>
+          </nav>
+        </div>
+        <!------------------------------------>
+
+        <div class="article__cards">
+          <div class="card">
+            <img class="card__image" src="./assets/images/speaker1.jpg" alt="">
+            <h3 class="card__title">Carlos Fernandez</h3>
+            <p class="card__text">
+              Director de ciberseguridad en una empresa global de servicios financieros. Cuenta con más de 20 años de experiencia en gestión de riesgos y compliance.
+            </p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./assets/images/speaker2.jpg" alt="">
+            <h3 class="card__title">Laura Torres</h3>
+            <p class="card__text">
+              Especialista en ciberseguridad con más de 15 años de experiencia en la protección de infraestructuras críticas. Consultora en grandes empresas tecnológicas y actualmente lidera el equipo de respuesta a incidentes en una multinacional
+            </p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./assets/images/speaker3.jpg" alt="">
+            <h3 class="card__title">Javier Gómez</h3>
+            <p class="card__text">Consultor en seguridad informática especializado en hacking ético. Ha liderado múltiples pruebas de penetración para identificar vulnerabilidades en sistemas corporativos.</p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./assets/images/speaker4.jpg" alt="">
+            <h3 class="card__title">Miguel Sanchez</h3>
+            <p class="card__text">
+              Profesor universitario y autor de varios libros sobre seguridad en redes. Ha colaborado en proyectos internacionales para mejorar la ciberseguridad en entornos académicos y corporativos.
+            </p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./assets/images/speaker5.jpg" alt="">
+            <h3 class="card__title">Ana Beltrán</h3>
+            <p class="card__text">
+              Experta en privacidad y protección de datos. Ha asesorado a organizaciones en la implementación de políticas de privacidad y cumplimiento del <abbr title="Reglamento General de Protección de Datos">RGPD</abbr>.
+            </p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./assets/images/speaker6.jpg" alt="">
+            <h3 class="card__title">Francisco Martinez</h3>
+            <p class="card__text">
+              Investigador en el campo de la seguridad informática y experta en análisis de <em>malware</em>. Ha desarrollado herramientas innovadoras para la detección de amenazas en redes empresariales.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+    <include src="./views/footer.html"></include>
+  </body>
+</html>

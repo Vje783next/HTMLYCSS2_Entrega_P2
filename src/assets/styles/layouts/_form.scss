@@ -1,0 +1,17 @@
+@use "../variables";
+
+.article__text {
+  container-type: inline-size;
+  padding: 20px;
+  margin: 20px;
+  font-size: 1.2rem;
+  background-color: rgba($bg-light, 0.8);
+  border-radius: 5px;
+}
+
+@container (min-width: 800px) {
+  .article__text {
+    width: 70%;
+    margin-inline: auto;
+  }
+}

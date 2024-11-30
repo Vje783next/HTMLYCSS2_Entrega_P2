@@ -1,0 +1,283 @@
+.poster {
+  background-image: url("../images/bg_index.jpg");
+  background-size: cover;
+  container-type: inline-size;
+}
+
+@container (min-width: 800px) {
+  .poster {
+    height: 100vh;
+  }
+}
+
+.poster__logo {
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $text-color-light;
+  text-align: center;
+  background-color: $bg-dark;
+
+  .fa-copyright {
+    margin-right: 20px;
+  }
+}
+
+.poster__nav {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+
+  .poster__nav-list {
+  
+    .nav__item {
+      display: block;
+      padding: 10px 0;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: $text-color-light;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $highlight-color;
+      }
+    }
+    
+    .nav__link {
+      color: $text-color-light;
+    }
+    
+    .nav__item:hover .nav__link {
+      color: $text-color-dark;
+    }
+  }
+}
+
+.poster__title {
+  padding: 10px;
+  margin-top: 50px;
+  color: $text-color-dark;
+  text-align: center;
+  background-color: $bg-light;
+  container-type: inline-size;
+
+
+  .poster__title-first {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .poster__title-green {
+    display: block;
+    padding: 21px;
+    margin-top: 10px;
+    font-weight: 700;
+    color: $text-color-light;
+    text-align: center;
+    background-color: $button-bg-color;
+  }
+}
+
+@container (min-width: 800px) {
+  .poster__title {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .poster__text {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .poster__contact-list {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+.poster__text {
+  padding: 20px;
+  margin-bottom: 50px;
+  color: $text-color-light;
+  background-color: $bg-dark;
+}
+
+.poster__contact {
+  padding: 10px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.contact__item {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: $text-color-light;
+  background-color: black;
+  border: $border-white;
+
+  &:hover {
+    border: 1px solid $highlight-color;
+    box-shadow: 2px 2px 5px $highlight-color;
+  }
+}
+
+.contact__link {
+  color: $text-color-light;
+}
+
+.contact__item:hover .contact__link {
+  color: $highlight-color;
+}
+
+.poster__social-media {
+  padding: 20px;
+  color: $text-color-light;
+  text-align: center;
+  background-color: $accent-purple;
+}
+
+.social-media__link {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: $text-color-light;
+
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+@media (min-width: 1200px) {
+  .poster__logo {
+    font-size: 2.5rem;
+  
+    .fa-copyright {
+      margin-right: 20px;
+    }
+  }
+
+  .poster__text {
+    font-size: 1.2rem;
+  }
+
+  .social-media__link {
+    font-size: 2rem;
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 800px) {
+    .poster {
+      display: grid;
+      grid-template-rows: repeat(6, 15vh);
+      grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
+      gap: 10px;
+      padding: 25px;
+    }
+
+    .poster__logo {
+      grid-row: 1 / 7;
+      grid-column: 1 / 2;
+      align-content: center;
+      font-size: 3rem;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+
+    .fa-copyright {
+      margin-bottom: 20px;
+    }
+
+    .poster__nav {
+      grid-row: 4 / 5;
+      grid-column: 2 / 5;
+      margin: 0;
+    }
+
+    .poster__nav-list {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      height: 100%;
+    }
+
+    .nav__item {
+      align-content: center;
+      padding: 0;
+      font-size: 1rem;
+    }
+
+    .poster__title {
+      grid-row: 1 / 3;
+      grid-column: 2 / 6;
+      align-content: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    .poster__text {
+      grid-row: 3 / 4;
+      grid-column: 3 / 7;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 0;
+      font-size: .9rem;
+      text-align: right;
+    }
+
+    @container (min-width: 1200px) {
+      .poster__title {
+        grid-column: 3 / 6;
+      }
+      .poster__text {
+        grid-column: 4 / 7;
+      }
+    }
+
+    .poster__contact {
+      grid-row: 5 / 6;
+      grid-column: 3 / 6;
+      padding: 0;
+      margin: 0;
+    }
+
+    .poster__contact-list {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      height: 100%;
+    }
+
+    .contact__item {
+      align-content: center;
+      height: 100%;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+    }
+
+    .poster__social-media {
+      grid-row: 6 / 7;
+      grid-column: 4 / 7;
+      align-content: center;
+    }
+
+    .poster__social-media-list {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      height: 100%;
+    }
+
+    .social-media__item {
+      align-content: center;
+    }
+
+    .social-media__link {
+      font-size: 2.5rem;
+    }
+  }
+}

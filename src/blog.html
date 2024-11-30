@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Estevez">
+    <meta name="description" content="Entrega P2 de la asignatura HTML y CSS2 del Master Universitario en Desarrollo de sitios y aplicaciones web de la UOC">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure Digital | Blog</title>
+    <link rel="stylesheet" href="./assets/styles/main.scss">
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+    <main class="main">
+      <article class="main__article">
+        <h2 class="article__title">Blog</h2>
+        <section class="article__blog">
+          <h2 class="blog__title">
+            Jornadas de Seguridad Informática y Cibernética: Fortaleciendo la
+            Defensa Digital
+          </h2>
+
+          <!--Bootstrap Component - Breadcrumb-->
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb fs-4">
+                <li class="breadcrumb-item"><a class="text-white text-underline" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li
+                  class="breadcrumb-item active text-white"
+                  aria-current="page"
+                >
+                  Blog
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="blog__container">
+            <figure>
+              <img
+                class="blog__image"
+                src="./assets/images/pexels-bertellifotografia-3321793.jpg"
+                alt=""
+              />
+              <figcaption>Lorem ipsum dolor sit amet consectetur.</figcaption>
+            </figure>
+            <blockquote class="blog__blockqoute">
+              <p class="blockquote__text">
+                <em
+                  >"La ciberseguridad no es solo una cuestión tecnológica, sino
+                  un compromiso constante de toda la organización para proteger
+                  sus activos más valiosos." —
+                  <cite
+                    >Laura Torres, experta en infraestructuras críticas.</cite
+                  ></em
+                >
+              </p>
+            </blockquote>
+            <p class="blog__text">
+              En un mundo cada vez más digitalizado, la seguridad informática y
+              cibernética se han convertido en pilares fundamentales para
+              proteger a las organizaciones y a los individuos frente a las
+              crecientes amenazas en línea. Las Jornadas de Seguridad
+              Informática y Cibernética reúnen a expertos del sector con el
+              objetivo de compartir conocimientos, experiencias y soluciones
+              innovadoras. Este evento, diseñado para profesionales, académicos
+              y entusiastas de la ciberseguridad, aborda los principales
+              desafíos actuales, como el aumento de ataques de ransomware, el
+              fraude digital y las vulnerabilidades en infraestructuras
+              críticas.
+            </p>
+            <p class="blog__text">
+              Una de las claves de estas jornadas es la colaboración entre
+              distintos sectores. Los asistentes tienen la oportunidad de
+              aprender de líderes de la industria, como Laura Torres, experta en
+              protección de infraestructuras críticas, quien enfatiza que “la
+              ciberseguridad es un esfuerzo colectivo; proteger el entorno
+              digital es una responsabilidad compartida”. Las ponencias incluyen
+              temas de actualidad, como la integración de la inteligencia
+              artificial en la detección de amenazas y la gestión del riesgo
+              cibernético en sectores sensibles como el financiero y el
+              gubernamental.
+            </p>
+          </div>
+          <div class="blog__container">
+            <figure>
+              <img
+                class="blog__image"
+                src="./assets/images/pexels-jonaskakaroto-2914419.jpg"
+                alt=""
+              />
+              <figcaption>Lorem ipsum dolor sit amet consectetur.</figcaption>
+            </figure>
+            <blockquote class="blog__blockqoute">
+              <p class="blockquote__text">
+                <em
+                  >"En un entorno digital en constante evolución, la capacidad
+                  de adaptarse rápidamente a nuevas amenazas es clave para
+                  garantizar la seguridad." —
+                  <cite
+                    >Elena Martínez, especialista en análisis de malware.</cite
+                  ></em
+                >
+              </p>
+            </blockquote>
+            <p class="blog__text">
+              Además, el evento no solo se centra en las amenazas actuales, sino
+              también en las proyecciones futuras. Ponentes como Elena Martínez
+              destacan la importancia de estar un paso adelante. “El panorama de
+              amenazas evoluciona constantemente; nuestra capacidad de
+              anticipación determinará nuestro nivel de seguridad”, afirma la
+              especialista en análisis de malware. Estos encuentros también
+              promueven la innovación tecnológica, con demostraciones prácticas
+              de herramientas de ciberseguridad y estrategias de protección.
+            </p>
+            <p class="blog__text">
+              Finalmente, las Jornadas de Seguridad Informática y Cibernética
+              son un espacio para fomentar el networking y la creación de
+              sinergias. Profesionales de distintas disciplinas comparten
+              experiencias y generan nuevas ideas para afrontar los desafíos de
+              un mundo digital cada vez más complejo. Este tipo de iniciativas
+              son esenciales para crear una cultura de seguridad sólida y
+              proactiva, capaz de mitigar las amenazas y garantizar la confianza
+              en los sistemas tecnológicos.
+            </p>
+          </div>
+
+          <!--Bootstrap Component - Collapse-->
+          <div class="container">
+            <p class="py-4">
+              <button
+                class="btn btn-primary btn-lg px-6 py-6 w-100"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample"
+                aria-expanded="false"
+                aria-controls="collapseWidthExample"
+              >
+                Principales temas abordados en las Jornadas de Seguridad
+                Informática y Cibernética:
+              </button>
+            </p>
+          </div>
+          <div class="article__container">
+            <div class="collapse" id="collapseWidthExample">
+              <div class="card card-body">
+                <ul class="blog__list">
+                  <li class="blog__item">
+                    Protección de infraestructuras críticas: Estrategias para defender sistemas esenciales frente a amenazas cibernéticas.
+                  </li>
+                  <li class="blog__item">
+                    Hacking ético: Cómo identificar vulnerabilidades a través de pruebas de penetración.
+                  </li>
+                  <li class="blog__item">
+                    Análisis de malware: Técnicas avanzadas para detectar y neutralizar software malicioso.
+                  </li>
+                  <li class="blog__item">
+                    Gestión del riesgo cibernético: Metodologías para evaluar y mitigar riesgos en entornos corporativos.
+                  </li>
+                  <li class="blog__item">
+                    Privacidad y protección de datos: Implementación de políticas de cumplimiento con el RGPD y otras normativas.
+                  </li>
+                  <li class="blog__item">
+                    Ciberseguridad e inteligencia artificial: Uso de tecnologías emergentes para anticipar y prevenir ciberataques.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <include src="./views/footer.html"></include>
+  </body>
+</html>

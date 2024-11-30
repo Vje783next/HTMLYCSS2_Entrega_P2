@@ -1,0 +1,64 @@
+@use "../variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: $font-family-body;
+  line-height: 1.6;
+}
+
+ul {
+  padding: 0;
+  li {
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+figcaption {
+  text-align: center
+}
+
+@layer
+  reset,
+  default,
+  themes,
+  patterns,
+  layouts,
+  components,
+  utilities;
+
+@layer one, two, three, four, five;
+
+@layer reset, bootstrap, utilities;
+
+/*
+@import url('bootstrap.css') layer(bootstrap);
+
+@import url('bootstrap/reset.css') layer(reset.bootstrap);
+@import url('bootstrap/theme.css') layer(theme.bootstrap);
+@import url('bootstrap/components.css') layer(components.bootstrap);
+
+@layer theme.local {
+  /* styles here will override theme.bootstrap */
+  /* but not interfere with styles from components.bootstrap */
+/*}
+*/
+
+@layer bootstrap, base, application;
+
+//@import url(bootstrap.css) layer(bootstrap);
