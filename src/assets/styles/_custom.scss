@@ -1,0 +1,41 @@
+@use "./variables" as v;
+
+// Components
+
+// 1 - Alert
+$danger: v.$accent-purple;
+$alert-padding-y: 20px;
+$alert-border-width: 20px;
+$alert-margin-bottom: 20px;
+
+// 2 - Breadcrumb
+$primary: v.$bg-primary;
+$breadcrumb-bg: $primary;
+$breadcrumb-padding-y: 20px;
+$breadcrumb-padding-x: 20px;
+$breadcrumb-margin-bottom: 40px;
+$breadcrumb-divider-color: v.$text-color-light;
+
+// 3 - Form
+$success: v.$button-bg-color;
+$form-label-font-size: 1.2rem;
+$form-select-padding-y-lg: 20px;
+$form-select-font-size: 1.2rem;
+$input-btn-font-size: 1.2rem;
+$btn-hover-bg-shade-amount: 20%;
+
+// 4 - Modal
+$secondary: v.$bg-secondary;
+$modal-backdrop-bg: $secondary;
+$modal-backdrop-opacity: 0.75;
+$modal-content-color: v.$text-color-light;
+$modal-content-bg: $primary;
+
+// 5 - Collapse
+$transition-collapse: height 1.5s ease;
+
+
+
+
+@import "bootstrap/scss/bootstrap";
+

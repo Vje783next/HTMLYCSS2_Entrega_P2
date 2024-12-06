@@ -21,7 +21,7 @@
           </h2>
 
           <!--Bootstrap Component - Breadcrumb-->
-          <div class="container">
+          <div class="container breadcrumb-custom">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb fs-4">
                 <li class="breadcrumb-item"><a class="text-white text-underline" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
@@ -40,7 +40,7 @@
               <img
                 class="blog__image"
                 src="./assets/images/pexels-bertellifotografia-3321793.jpg"
-                alt=""
+                alt="Hombre sentado hablando en una conferencia con asistentes"
               />
               <figcaption>Lorem ipsum dolor sit amet consectetur.</figcaption>
             </figure>
@@ -125,25 +125,16 @@
             </p>
           </div>
 
-          <!--Bootstrap Component - Collapse-->
+          <!--Bootstrap Component - Collapse-->+
           <div class="container">
-            <p class="py-4">
-              <button
-                class="btn btn-primary btn-lg px-6 py-6 w-100"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseWidthExample"
-                aria-expanded="false"
-                aria-controls="collapseWidthExample"
-              >
+            <p class="d-flex gap-1 justify-content-center text-center">
+              <button class="btn btn-success w-100 py-4 fs-4 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Principales temas abordados en las Jornadas de Seguridad
-                Informática y Cibernética:
+                Informática y Cibernética:           
               </button>
             </p>
-          </div>
-          <div class="article__container">
-            <div class="collapse" id="collapseWidthExample">
-              <div class="card card-body">
+            <div class="collapse bg-light" id="collapseExample">
+              <div class="card card-body bg-light">
                 <ul class="blog__list">
                   <li class="blog__item">
                     Protección de infraestructuras críticas: Estrategias para defender sistemas esenciales frente a amenazas cibernéticas.
@@ -163,8 +154,7 @@
                   <li class="blog__item">
                     Ciberseguridad e inteligencia artificial: Uso de tecnologías emergentes para anticipar y prevenir ciberataques.
                   </li>
-                </ul>
-              </div>
+                </ul>            </div>
             </div>
           </div>
         </section>

@@ -1,22 +1,17 @@
+@use "../variables" as v;
+
 .poster {
   background-image: url("../images/bg_index.jpg");
   background-size: cover;
-  container-type: inline-size;
-}
-
-@container (min-width: 800px) {
-  .poster {
-    height: 100vh;
-  }
 }
 
 .poster__logo {
   padding: 20px;
   font-size: 2rem;
   font-weight: 700;
-  color: $text-color-light;
+  color: v.$text-color-light;
   text-align: center;
-  background-color: $bg-dark;
+  background-color: v.$bg-dark;
 
   .fa-copyright {
     margin-right: 20px;
@@ -26,41 +21,43 @@
 .poster__nav {
   padding: 20px;
   text-align: center;
-  background-color: black;
+  background-color: v.$bg-dark;
 
   .poster__nav-list {
+    padding: 0;
   
     .nav__item {
       display: block;
       padding: 10px 0;
       margin-bottom: 10px;
       font-weight: 700;
-      color: $text-color-light;
+      color: v.$text-color-light;
       border-radius: 5px;
 
       &:hover {
-        background-color: $highlight-color;
+        background-color: v.$highlight-color;
       }
     }
     
     .nav__link {
-      color: $text-color-light;
+      color: v.$text-color-light;
     }
     
     .nav__item:hover .nav__link {
-      color: $text-color-dark;
+      color: v.$text-color-dark;
     }
   }
+
 }
 
 .poster__title {
-  padding: 10px;
+  padding: 20px;
   margin-top: 50px;
-  color: $text-color-dark;
+  margin-bottom: 50px;
+  color: v.$text-color-dark;
   text-align: center;
-  background-color: $bg-light;
+  background-color: v.$bg-light;
   container-type: inline-size;
-
 
   .poster__title-first {
     font-size: 2.5rem;
@@ -70,102 +67,97 @@
   
   .poster__title-green {
     display: block;
-    padding: 21px;
+    padding: 20px;
     margin-top: 10px;
     font-weight: 700;
-    color: $text-color-light;
+    color: v.$text-color-light;
     text-align: center;
-    background-color: $button-bg-color;
-  }
-}
-
-@container (min-width: 800px) {
-  .poster__title {
-    width: 80%;
-    margin-inline: auto;
-  }
-  .poster__text {
-    width: 80%;
-    margin-inline: auto;
-  }
-  .poster__contact-list {
-    width: 80%;
-    margin-inline: auto;
+    background-color: v.$button-bg-color;
   }
 }
 
 .poster__text {
   padding: 20px;
-  margin-bottom: 50px;
-  color: $text-color-light;
-  background-color: $bg-dark;
+  margin: 0;
+  font-size: .9rem;
+  color: v.$text-color-light;
+  background-color: v.$bg-dark;
 }
 
 .poster__contact {
-  padding: 10px;
-  margin: 50px 0;
+  padding: 20px;
   text-align: center;
-}
 
-.contact__item {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  color: $text-color-light;
-  background-color: black;
-  border: $border-white;
+  .poster__contact-list {
+    width: 100%;
+    padding: 0;
 
-  &:hover {
-    border: 1px solid $highlight-color;
-    box-shadow: 2px 2px 5px $highlight-color;
+    .contact__item {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      color: v.$text-color-light;
+      background-color: v.$bg-dark;
+      border: v.$border-white;
+    
+      &:hover {
+        border: 3px solid v.$highlight-color;
+        box-shadow: 0 0 5px v.$highlight-color;
+      }
+    }
+    .contact__link {
+      color: v.$text-color-light;
+    }
+    
+    .contact__item:hover .contact__link {
+      color: v.$highlight-color;
+    }
   }
-}
-
-.contact__link {
-  color: $text-color-light;
-}
-
-.contact__item:hover .contact__link {
-  color: $highlight-color;
 }
 
 .poster__social-media {
   padding: 20px;
-  color: $text-color-light;
+  color: v.$text-color-light;
   text-align: center;
-  background-color: $accent-purple;
-}
+  background-color: v.$accent-purple;
 
-.social-media__link {
-  padding: 10px;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  color: $text-color-light;
+  .poster__social-media-list {
+    padding: 20px;
+    margin: 0;
 
-  &:hover {
-    color: $highlight-color;
+    .social-media__link {
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 2rem;
+      color: v.$text-color-light;
+    
+      &:hover {
+        color: v.$highlight-color;
+      }
+    }
   }
 }
 
-@media (min-width: 1200px) {
-  .poster__logo {
-    font-size: 2.5rem;
-  
-    .fa-copyright {
-      margin-right: 20px;
-    }
+@media (min-width: 800px) {
+  .poster {
+    min-height: 100vh;
   }
 
   .poster__text {
     font-size: 1.2rem;
   }
 
-  .social-media__link {
-    font-size: 2rem;
+  :is(.poster__title, .poster__text, .poster__contact) {
+    width: 70%;
+    margin-inline: auto;
   }
 }
 
 @supports (display: grid) {
+  .poster__title {
+    margin-bottom: 50px;
+  }
+
   @media (min-width: 800px) {
     .poster {
       display: grid;
@@ -179,33 +171,36 @@
       grid-row: 1 / 7;
       grid-column: 1 / 2;
       align-content: center;
-      font-size: 3rem;
+      font-size: 2.75rem;
       writing-mode: vertical-rl;
       text-orientation: upright;
-    }
 
-    .fa-copyright {
-      margin-bottom: 20px;
+      .fa-copyright {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
 
     .poster__nav {
       grid-row: 4 / 5;
       grid-column: 2 / 5;
-      margin: 0;
-    }
-
-    .poster__nav-list {
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100%;
-      height: 100%;
-    }
-
-    .nav__item {
-      align-content: center;
       padding: 0;
-      font-size: 1rem;
+      margin: 0;
+
+      .poster__nav-list {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        height: 100%;
+
+        .nav__item {
+          align-content: center;
+          padding: 0;
+          margin-bottom: 0;
+          font-size: 1rem;
+        }
+      }
     }
 
     .poster__title {
@@ -221,63 +216,50 @@
       grid-column: 3 / 7;
       align-content: center;
       width: 100%;
-      margin-bottom: 0;
-      font-size: .9rem;
+      font-size: 1rem;
       text-align: right;
-    }
-
-    @container (min-width: 1200px) {
-      .poster__title {
-        grid-column: 3 / 6;
-      }
-      .poster__text {
-        grid-column: 4 / 7;
-      }
     }
 
     .poster__contact {
       grid-row: 5 / 6;
       grid-column: 3 / 6;
+      width: 100%;
       padding: 0;
       margin: 0;
-    }
 
-    .poster__contact-list {
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: repeat(3, 1fr);
-      height: 100%;
-    }
+      .poster__contact-list {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        height: 100%;
 
-    .contact__item {
-      align-content: center;
-      height: 100%;
-      padding: 0;
-      font-size: 1rem;
-      font-weight: 700;
-      border: none;
+        .contact__item {
+          align-content: center;
+          height: 100%;
+          padding: 10px;
+          font-size: .9rem;
+          font-weight: 700;
+          border: none;
+        }
+      }
     }
 
     .poster__social-media {
       grid-row: 6 / 7;
       grid-column: 4 / 7;
-      align-content: center;
-    }
 
-    .poster__social-media-list {
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: repeat(3, 1fr);
-      width: 100%;
-      height: 100%;
-    }
+      .poster__social-media-list {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        height: 100%;
 
-    .social-media__item {
-      align-content: center;
-    }
-
-    .social-media__link {
-      font-size: 2.5rem;
+        .social-media__item {
+          align-content: center;
+        }
+      }
     }
   }
 }

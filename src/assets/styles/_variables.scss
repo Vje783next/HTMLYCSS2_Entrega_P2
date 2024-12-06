@@ -14,15 +14,3 @@ $accent-purple: #CC2DE1; // Color morado de acento
 $border-white: 1px solid $text-color-light;
 $box-shadow: 5px 5px 10px rgba($bg-dark, 0.15);
 
-// Bootstrap colors
-
-$theme-colors: (
-  "primary": $bg-primary, // Color principal (negro)
-  "secondary": $bg-secondary, // Color secundario
-  "card-bg": $card-bg-color,
-  "text-light": $text-color-light, // Texto claro
-  "text-dark": $text-color-dark,  // Texto oscuro
-  "highlight": $highlight-color, // Color de acento (morado)
-  "button-bg": $button-bg-color,
-  "purple": $accent-purple // Fondo del botón (rojo)
-);

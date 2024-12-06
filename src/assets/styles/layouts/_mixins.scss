@@ -1,7 +1,9 @@
-@mixin center {
+@use "../variables" as v;
+
+@mixin box-center {
   width: 100%;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   border-radius: 5px;
 }

@@ -1,3 +1,6 @@
+@use "../variables" as v;
+@use './mixins' as m;
+
 @function gradientColor($colors, $type) {
   @if $type == linear {
     @return linear-gradient($colors);
@@ -6,7 +9,7 @@
   }
 }
 
-$gradient: gradientColor(($bg-primary, $bg-secondary), radial);
+$gradient: gradientColor((v.$bg-primary, v.$bg-secondary), radial);
 
 .main {
   padding-bottom: 50px;
@@ -15,13 +18,11 @@ $gradient: gradientColor(($bg-primary, $bg-secondary), radial);
 }
 
 .article__title {
-  width: 100%;
-  padding: 20px;
+  @include m.box-center;
   margin-bottom: 50px;
   font-size: 2rem;
   font-weight: 700;
-  text-align: center;
-  background-color: $button-bg-color;
+  background-color: v.$button-bg-color;
 }
 
 @container title (min-width: 800px) {

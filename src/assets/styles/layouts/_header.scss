@@ -1,16 +1,16 @@
-@use "../variables";
+@use "../variables" as v;
 
 .header {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  color: $text-color-light;
-  background-color: $bg-dark;
+  background-color: v.$bg-dark;
 
   .header__logo {
     padding: 20px 0;
     font-size: 2rem;
     font-weight: 700;
+    color: v.$text-color-light;
     text-align: center;
 
     .fa-copyright {
@@ -26,22 +26,26 @@
 
   .header__nav {
     text-align: center;
+
+    .nav__list {
+      padding: 0;
+
+      .nav__item {
+        display: block;
+        padding: 20px 0;
   
-    .nav__item {
-      display: block;
-      padding: 20px 0;
-
-      .nav__link {
-        padding: 10px 20px;
-        font-size: 1.25rem;
-        color: $text-color-light;
-        letter-spacing: 2px;
-        border-radius: 5px;
-        transition: background-color 0.1s, color 0.1s;
-
-        &:hover {
-          color: $text-color-dark;
-          background-color: $highlight-color;
+        .nav__link {
+          display: block;
+          padding: 10px 20px;
+          font-size: 1.25rem;
+          letter-spacing: 2px;
+          border-radius: 5px;
+          transition: background-color 0.1s, color 0.1s;
+  
+          &:hover {
+            color: v.$text-color-dark;
+            background-color: v.$highlight-color;
+          }
         }
       }
     }

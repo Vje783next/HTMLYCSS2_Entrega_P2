@@ -1,17 +1,34 @@
-@use "../variables";
+@use "../variables" as v;
+@use "./mixins" as m;
+
+.registraton__container {
+  container-type: inline-size;
+  width: 85%;
+  margin-inline: auto;
+}
 
 .article__text {
-  container-type: inline-size;
   padding: 20px;
-  margin: 20px;
-  font-size: 1.2rem;
-  background-color: rgba($bg-light, 0.8);
-  border-radius: 5px;
+  margin-inline: auto; 
+  margin-bottom: 5cq; 
+  font-size: 1.2cq; 
+  background-color: rgba(v.$bg-light, 0.8);
+  border-radius: 0.5cq; 
 }
 
 @container (min-width: 800px) {
   .article__text {
-    width: 70%;
+    padding: 3cq;
     margin-inline: auto;
+    font-size: 5cq; 
+    border-radius: 0.8cq;
   }
+}
+
+.fa-comment {
+  margin-right: 10px;
+}
+
+.fa-arrow-right {
+  margin-left: 10px;
 }
