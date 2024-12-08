@@ -1,6 +1,7 @@
 @use "../variables" as v;
 @use "./mixins" as m;
 
+
 .registraton__container {
   container-type: inline-size;
   width: 85%;
@@ -10,18 +11,20 @@
 .article__text {
   padding: 20px;
   margin-inline: auto; 
-  margin-bottom: 5cq; 
-  font-size: 1.2cq; 
-  background-color: rgba(v.$bg-light, 0.8);
-  border-radius: 0.5cq; 
+  margin-bottom: 20px; 
+  font-size: 1.2rem; 
+  background-color: color(display-p3 1.0001 1 0.9999 / 0.8);
+  border-radius: .5px; 
 }
 
 @container (min-width: 800px) {
   .article__text {
-    padding: 3cq;
+    width: 80cqw;
+    padding: 5cqw;
     margin-inline: auto;
-    font-size: 5cq; 
-    border-radius: 0.8cq;
+    margin-bottom: 5cqh; 
+    font-size: 2cqw; 
+    border-radius: 0.5cqw;
   }
 }
 

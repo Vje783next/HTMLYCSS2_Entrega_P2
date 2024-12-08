@@ -14,7 +14,7 @@
     "color-named": "never",
     "no-invalid-position-at-import-rule": null,
     "declaration-block-no-duplicate-properties": true,
-    "unit-allowed-list": ["em", "rem", "px", "s", "fr", "cq", "dvh", "dvw", "%", "vh", "vw", "ms", "deg"],
+    "unit-allowed-list": ["em", "rem", "px", "s", "fr", "cqw", "cqh", "dvh", "dvw", "%", "vh", "vw", "ms", "deg"],
     "unit-no-unknown": [
       true,
       {

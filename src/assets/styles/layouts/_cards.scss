@@ -1,8 +1,7 @@
 @use "../variables" as v;
 @use "./mixins" as m;
-@use "bootstrap/scss/bootstrap" as b;
 
-@layer reset, base, bootstrap, components, layout;
+@layer reset, base, bootstrap, componentscards, layout;
 
 @layer base {
   .article__cards {
@@ -14,16 +13,16 @@
   }
 }
 
-@layer components {
+@layer componentscards {
   .card {
     padding: 20px;
     color: v.$text-color-dark;
-    background-color: rgba(v.$bg-light, 0.8) !important;
+    background-color: rgba(v.$bg-light, 0.8);
     border-radius: 5px;
 
     .card__title {
       @include m.box-center;
-      font-weight: 700 !important;
+      font-weight: 700;
       background-color: v.$button-bg-color;
     }
 
@@ -53,10 +52,9 @@
   
   @container (min-width: 800px) {
     .card {
-      flex: 1 1 clamp(350px, 30%, 500px) !important;
+      flex: 1 1 clamp(350px, 30%, 500px);
       min-width: 350px;
       max-width: 500px;    
     }
   }
 }
-
