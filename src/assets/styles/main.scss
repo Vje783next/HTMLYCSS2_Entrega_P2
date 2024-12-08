@@ -3,6 +3,14 @@
  * Do not include SCSS code in this file.
  */
 
+ // Import all of Bootstrap's CSS
+@use "bootstrap/scss/bootstrap";
+
+/**
+ * Import variables
+ */
+
+ @use "custom";
 
 /**
  * Import layouts
@@ -18,11 +26,11 @@
  @forward "layouts/blog";
  @forward "layouts/mixins";
 
-/**
- * Import variables
- */
 
-@import "custom";
+ // Specify weight
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
 
 /**
  * Import npm dependencies
@@ -30,15 +38,7 @@
  * see commented examples below
  */
 
-// Import all of Bootstrap's CSS
-@import "bootstrap/scss/bootstrap";
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
-
-
- // Specify weight
-
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
 
 
 /**

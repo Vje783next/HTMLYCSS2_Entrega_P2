@@ -2,7 +2,7 @@
 @use "./mixins" as m;
 
 //@layer base, components, default, utilities;
-@layer reset, base, bootstrap, components, layout, utilities;
+@layer reset, base, layout, bootstrap, utilities, components;
 
 @layer base {
   .article__blog {
@@ -15,35 +15,6 @@
     container-name: blog;
     background-color: rgba(v.$bg-light, 0.8);
     border-radius: 5px;
-  }
-}
-
-@layer components {
-  .blog__title {
-    margin-bottom: 40px !important; 
-    font-size: 2.8rem !important;
-    text-align: center;
-    background-color: rgba(v.$bg-light, 0.8);
-  }
-
-  .blog__image {
-    border-radius: 5px;
-  }
-
-  .blog__list {
-    padding: 0 !important;
-  }
-
-  .blog__item {
-    display: block;
-    padding: 20px 0;
-    border-bottom: 1px solid v.$text-color-dark;
-  }
-
-  .blog__blockqoute {
-    margin-left: 50px;
-    font-size: 1.5rem;
-    border-left: 4px solid v.$text-color-dark;
   }
 }
 
@@ -79,6 +50,12 @@
   }
 }
 
+@layer bootstrap {
+  h2 {
+    font-size: 1.325rem;
+  }
+}
+
 @layer utilities {
   :is(.blog__title, .blog__container, .blog__blockqoute) {
     padding: 20px;
@@ -107,3 +84,34 @@
     margin-inline: auto;
   }
 }
+
+@layer components {
+  .blog__title {
+    margin-bottom: 40px !important; 
+    font-size: 2.8rem !important;
+    text-align: center;
+    background-color: rgba(v.$bg-light, 0.8);
+  }
+
+  .blog__image {
+    border-radius: 5px;
+  }
+
+  .blog__list {
+    padding: 0 !important;
+  }
+
+  .blog__item {
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid v.$text-color-dark;
+  }
+
+  .blog__blockqoute {
+    margin-left: 50px;
+    font-size: 1.5rem;
+    border-left: 4px solid v.$text-color-dark;
+  }
+}
+
+

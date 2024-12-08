@@ -1,5 +1,7 @@
 @use "./variables" as v;
 
+$headings-font-size: 2.8rem;
+
 // Components
 
 // 1 - Alert
@@ -24,6 +26,10 @@ $form-select-font-size: 1.2rem;
 $input-btn-font-size: 1.2rem;
 $btn-hover-bg-shade-amount: 20%;
 
+.bg-custom:hover {
+  background-color: v.$highlight-color !important;
+}
+
 // 4 - Modal
 $secondary: v.$bg-secondary;
 $modal-backdrop-bg: $secondary;
@@ -33,9 +39,6 @@ $modal-content-bg: $primary;
 
 // 5 - Collapse
 $transition-collapse: height 1.5s ease;
-
-
-
 
 @import "bootstrap/scss/bootstrap";
 

@@ -3,6 +3,8 @@
 .poster {
   background-image: url("../images/bg_index.jpg");
   background-size: cover;
+  container-type: inline-size;
+  container-name: poster;
 }
 
 .poster__logo {
@@ -47,7 +49,6 @@
       color: v.$text-color-dark;
     }
   }
-
 }
 
 .poster__title {
@@ -142,7 +143,9 @@
   .poster {
     min-height: 100vh;
   }
+}
 
+@container poster (min-width: 800px) {
   .poster__text {
     font-size: 1.2rem;
   }

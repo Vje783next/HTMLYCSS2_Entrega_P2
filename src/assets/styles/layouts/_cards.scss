@@ -6,11 +6,11 @@
 
 @layer base {
   .article__cards {
-    container: inline-size;
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 20px;
+    container: inline-size;
   }
 }
 
@@ -18,7 +18,7 @@
   .card {
     padding: 20px;
     color: v.$text-color-dark;
-    background-color: rgba(v.$bg-light, 0.8);
+    background-color: rgba(v.$bg-light, 0.8) !important;
     border-radius: 5px;
 
     .card__title {
@@ -43,17 +43,20 @@
 }
 
 @layer layout {
-  @container (min-width: 800px) {
+  @media (min-width: 800px) {
     .article__cards {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
+    }
+  }
   
-      .card {
-        flex: 1 1 clamp(350px, 30%, 500px);
-        min-width: 350px; 
-        max-width: 500px; 
-      }
+  @container (min-width: 800px) {
+    .card {
+      flex: 1 1 clamp(350px, 30%, 500px) !important;
+      min-width: 350px;
+      max-width: 500px;    
     }
   }
 }
+
